@@ -2,12 +2,79 @@
 @import url(./header.css);
 
 body{
+    width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 100px;
+    background-color: rgb(54, 54, 54);
 }
+
+#conteinerBody{
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 #header{
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+#chartConteiner{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height: 55vh;
+    width: 45vw;
+    max-width: 1500px;
+}
+
+#chartConteiner canvas {
+
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(32, 32, 32);
+    
+}
+
+#relatory {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    color: rgb(219, 219, 219);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    max-width: 1500px
+}
+
+.relatoryDay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: large;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(219, 219, 219);
 }
