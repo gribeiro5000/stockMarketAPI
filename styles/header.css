@@ -1,0 +1,28 @@
+#Conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 80px;
+    height: auto;
+
+    background-color: rgb(32, 32, 32);
+    color: rgb(219, 219, 219);
+    font-family: sans-serif;
+}
+#logo{
+    font-size:large;
+    max-width: 60px;
+    margin-right: 50px;
+}
+.categoria{
+    font-size: medium;
+    margin-right: 50px;
+}
+a{
+    text-decoration: none;
+    color: rgb(219,219,219);
+}
