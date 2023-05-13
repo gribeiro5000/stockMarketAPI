@@ -10,15 +10,21 @@
 </head>
 <body>
     <div id="header">
-        <div id="Conteiner">
+        <div id="conteiner">
             <div id="logo">
                 <a href="./home.html">Stock Market API</a>
             </div>
             <div class="categoria">
-                <a href="./assetsAnalytics.html">Assets Analytics</a>
+                <a href="./assetsAnalytics.html?symbol=BOVA11.SAO">Assets Analytics</a>
             </div>
             <div class="categoria">
                 <a href="./news.html">News</a>
+            </div>
+        </div>
+        <div id="conteiner2">
+            <div id="searchHeader">
+                <input type="search" name="" id="searchBoxHeader" placeholder="Company Name">
+                <button id="searchButtonHeader">Search</button>
             </div>
         </div>
     </div>
@@ -32,7 +38,10 @@
     </div>
     <div id="searchCompany">
         <h2>Enter a Company Name</h2>
-        <input type="search" name="" id="searchBox" placeholder="Company Name">
+        <div id="search">
+            <input type="search" id="searchBox" name="" placeholder="Company Name">
+            <button id="searchButton">Search</button>
+        </div>
     </div>
     <script src="../javascript/home.js"></script>
 </body>

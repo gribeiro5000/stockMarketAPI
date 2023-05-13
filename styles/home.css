@@ -8,7 +8,6 @@ body{
     margin-top: 80px;
 }
 #header{
-    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -39,11 +38,33 @@ body{
     color: rgb(70, 70, 70);
 }
 
-#searchCompany input {
+#search {
+    display: flex;
+    flex-direction: row;
     border-radius: 50px;
-    text-align: center; 
     border: 1px solid;
-    width: 400px;
+    width: 25%;
+}
+
+#searchCompany input {
+    text-align: center;
+    border: 0;
+    margin-left: 20px;
+    width: 75%;
     height: 30px;
+}
+
+#searchCompany input:focus {
+    outline: 0;
+}
+
+#searchCompany button {
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    color: rgb(219, 219, 219);
+    width: 25%;
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 

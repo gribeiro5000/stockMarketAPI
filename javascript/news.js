@@ -3,6 +3,15 @@ var urlNews = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&apikey=
 
 var allNews = getAllNews()
 
+$(`#searchButtonHeader`).click(e => { 
+    e.preventDefault();
+    if($(`#searchBoxHeader`).val() != ``){
+        window.location.href = `./searchResult.html?keywords=${$(`#searchBoxHeader`).val()}`
+    } else {
+        alert(`valor vazio`)
+    }
+});
+
 //get all news
 function getAllNews() {
     fetch(urlNews).then(response => {

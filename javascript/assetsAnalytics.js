@@ -1,11 +1,19 @@
 var apiKey = `1D0KB1CVSUC9D3T3`
-var symbol = `TSLA`
+var symbol = getTickerBtUrl()
 var companyName = ``
 
 var urlTimeSeriesDaily = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${apiKey}`
-var urlSymbolSearch = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=${apiKey}`
 
 getTimeSeriesDaily()
+
+$(`#searchButtonHeader`).click(e => { 
+    e.preventDefault();
+    if($(`#searchBoxHeader`).val() != ``){
+        window.location.href = `./searchResult.html?keywords=${$(`#searchBoxHeader`).val()}`
+    } else {
+        alert(`valor vazio`)
+    }
+});
 
 
 //get raw (as-traded) daily open/high/low/close/volume value
@@ -150,8 +158,14 @@ function createDateArrays(data){
 
     for(var pos = 147; pos > 0; pos--){
         date.setDate(date.getDate() - pos)
-        if(typeof data[formatDateYYYYMMDD(date)] == "object"){
-            dateList.push(formatDateYYYYMMDD(date))
+        var i = formatDateYYYYMMDD(date)
+        try{
+            if(typeof data[i] == "object"){
+                dateList.push(i)
+            }
+        }
+        catch{
+            
         }
         date = new Date()
     }
@@ -173,4 +187,11 @@ function formatDateYYYYMMDD(date){
     }
 
     return `${year}-${month}-${day}`
+}
+
+function getTickerBtUrl(){
+    var keywords = window.location.href
+    var myArray = keywords.split(`?`)
+    keywords = myArray[1].substr(7)
+    return keywords
 }

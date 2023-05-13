@@ -1,0 +1,37 @@
+/*-Importa outros arquivo css para este-*/
+@import url(./header.css);
+
+body{
+    width: 100%;
+    margin: 0;
+    padding-top: 100px;
+    background-color: rgb(54, 54, 54);
+    font-family: sans-serif;
+}
+
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#conteiner3 {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.companyBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 20px;
+    width: 28%;
+    margin: 5px;
+    padding: 10px;
+}
